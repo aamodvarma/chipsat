@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Project Turtle</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+
+<body style="
+background: black;
+background-attachment: fixed;
+         ">
+
+         <div class="section">
+<div class="m-video js-video">
+	<video class="m-video__video js-video-video" poster="https://www.robsimpson.me/img/bitmap/tutorials/autoplay-html5-video-on-ios-android-and-desktop/showreel-1280.jpg" autoplay loop muted playsinline>
+		<source src="./Chipsat_Vide.mp4">
+	</video>
+
+
+</div>
+         </div>
+
+
+        <div class="section" style="height:100vh; background: url('./img/2.png')">
+        </div>
+        <div class="section" style="height:100vh; background: url('./img/3.png')">
+        </div>
+
+       <div class="section" style="height:100vh; background: url('./img/4.png')">
+        </div>
+
+       <div class="section" style="height:100vh; background: url('./img/5.png')">
+        </div>
+
+       <div class="section" style="height:100vh; background: url('./img/6.png')">
+        </div>
+
+       <div class="section" style="height:100vh; background: back ; align-items: center;"> 
+        <h1 style="
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        letter-spacing: 2px;
+        font-size:xxx-large;
+        text-align: center;
+        margin-top: 15%;
+
+        ">
+
+            Interested to work on this?
+            <br>
+            Fill in this <a href="https://uut4ws17ycm.typeform.com/to/OHWpIi3b"><u>form</u></a>
+
+        </h1>
+        </div>
+        
+    <div class="section" style="height:100vh; background: url('./img/8.png')">
+        </div>
+        
+
+
+
+
+    </div>
+<style>
+
+
+#set-height {
+  display: block;
+  height: 10500px;
+}
+#v0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+p font-family helvetica {
+  font-size: 24px;
+}
+
+</style>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+
+
+
+    <script src="./js/app.js"></script>
+
+    <scbackground-position: center center; height: 100vh;background-attachment: fixed; width: 100%;
+ -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;ript src="./js/nav.js"></script>
+
+    <script>
+
+class Video {
+	constructor(video) {
+		this.videoContainer = video;
+		this.video = this.videoContainer.querySelector('.js-video-video');
+		this.playButton = this.videoContainer.querySelector('.js-video-play-button');
+		this.pauseButton = this.videoContainer.querySelector('.js-video-pause-button');
+
+		this.prefersReducedMotion();
+		this.addEventListeners();
+	}
+
+	prefersReducedMotion() {
+		// If the users browser supports reduced motion and the user has set it to true, remove the autoplay attribute from the video and pause it
+		if(matchMedia('(prefers-reduced-motion)').matches) {
+			this.video.removeAttribute('autoplay');
+			this.pauseVideo();
+		}
+	}
+
+	addEventListeners() {
+		this.playButton.addEventListener('click', () => {
+			this.playVideo();
+			// Focus the pause button so keyboard users can immediately pause the video without having to tab away and back again
+			this.pauseButton.focus();
+		});
+
+		this.pauseButton.addEventListener('click', () => {
+			this.pauseVideo();
+			// Focus the play button so keyboard users can immediately play the video without having to tab away and back again
+			this.playButton.focus();
+		});
+	}
+
+	playVideo() {
+		this.video.play();
+		// Set the play button as pressed so it's hidden and the pause button is displayed instead
+		this.playButton.setAttribute('aria-pressed', 'true');
+		this.pauseButton.setAttribute('aria-pressed', 'false');
+	}
+
+	pauseVideo() {
+		this.video.pause();
+		// Set the pause button as pressed so it's hidden and the play button is displayed instead
+		this.playButton.setAttribute('aria-pressed', 'false');
+		this.pauseButton.setAttribute('aria-pressed', 'true');
+	}
+}
+
+// Check if the users browser supports these features
+const enhance = 'querySelector' in document && 'addEventListener' in window && 'classList' in document.documentElement;
+
+// If the users browser browser supports the features we need, remove the no-enhance class from the html element and execute our video JS
+if(enhance) {
+	document.documentElement.classList.remove('no-enhance');
+
+	// Find all video molecules and instantiate a new instance of the Video class
+	const videos = document.querySelectorAll('.js-video');
+	Array.from(videos).forEach((video) => {
+		const videoEl = new Video(video);
+	});
+}
+
+</script>
+
+
+
+</body>
+
+</html>
